@@ -1,0 +1,79 @@
+html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%; 
+        overflow: hidden;
+        background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(6) rotate(60)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(224, 48%, 16%, 1)'/><path d='M0 0h10v10H0z'  stroke-width='1' stroke='none' fill='hsla(205, 48%, 16%, 1)'/><path d='M10 10h10v10H10z'  stroke-width='1' stroke='none' fill='hsla(205, 48%, 16%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+        font-size: calc(15px + 0.390625vw);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: "frames";
+}
+
+.logo{
+        color: #ff00b3;
+        text-align: center;
+        font-size: 2.75rem;
+        text-shadow: 0 0 8px #000000;
+        /* border: 3px red dashed; */
+        padding-top: 0;
+   
+}
+
+.inbetween{
+        color: #ffb300;
+}
+
+.frames {
+        font-family: "frames";
+      }
+
+.versionavec {
+        font-family: "versionavec";
+        font-weight: bolder;
+      }
+
+.version{
+        font-family: "version";
+        font-weight: bolder;
+}
+
+
+@font-face {
+        font-family: frames;
+        src: url(assets/FramesPartOne-Medium.otf);
+      }
+
+@font-face {
+        font-family: versionavec;
+        src: url(assets/Version_0.4_10_skeletor_avec.ttf);
+      }
+
+@font-face {
+        font-family: version;
+        src: url(assets/Version_0.1_10_skeletor.ttf);
+      }
+      
+
+.logo:hover {
+        -webkit-animation-name: wiggle;
+        -webkit-animation-duration: 2000ms;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: ease-in-out;
+      }
+      
+      @-webkit-keyframes wiggle {
+        0% {-webkit-transform: rotate(5deg);}
+        25% {-webkit-transform: rotate(-5deg);}
+        50% {-webkit-transform: rotate(10deg);}
+        75% {-webkit-transform: rotate(-2.5deg);}
+        100% {-webkit-transform: rotate(0deg);}
+      }
+      
+      @keyframes wiggle {
+        0% {transform: rotate(5deg);}
+        25% {transform: rotate(-5deg);}
+        50% {transform: rotate(10deg);}
+        75% {transform: rotate(-2.5deg);}
+        100% {transform: rotate(0deg);}
+      }
