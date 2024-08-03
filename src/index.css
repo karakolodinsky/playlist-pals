@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html, body {
         margin: 0;
         padding: 0;
@@ -8,6 +12,8 @@ html, body {
         background-repeat: no-repeat;
         background-attachment: fixed;
         font-family: "frames";
+        text-decoration: none;
+        cursor: url(assets/cursor.cur) , auto !important;
 }
 
 .logo{
@@ -15,7 +21,6 @@ html, body {
         text-align: center;
         font-size: 2.75rem;
         text-shadow: 0 0 8px #000000;
-        /* border: 3px red dashed; */
         padding-top: 0;
    
 }
@@ -28,16 +33,109 @@ html, body {
         font-family: "frames";
       }
 
+
+a{
+        text-decoration: none !important;
+        color: #ffb300 !important;
+
+}
 .versionavec {
         font-family: "versionavec";
         font-weight: bolder;
       }
+
+.styling{
+        padding: .25rem .25rem .25rem .25rem !important;
+        margin: auto;
+}
+
+a:hover{
+        color: #ff00b3 !important;
+}
 
 .version{
         font-family: "version";
         font-weight: bolder;
 }
 
+.introdiv{
+        background-color: black;
+        border: #ff00b3 solid 1px;
+        color: #ff00b3;
+        margin:auto;
+        width: 30rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 1rem;
+        padding: 1rem;
+        font-weight: bolder;
+        font-size: larger;
+
+}
+
+.text span {
+   opacity: 0;
+}
+.text span.revealed {
+   opacity: 1;
+}
+.text span.green {
+   color: #27ae60;
+}
+.text span.red {
+   color: #ff0000;
+}
+
+.flex{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+}
+
+.flex-row{
+        
+        display: flex;
+        align-items: right;
+        justify-content: right;
+        flex-direction: row;
+        position:absolute;
+        bottom:0;
+        right:0;
+        
+}
+
+.credit{
+        border: #ffb300 solid 1px;
+        border-radius: 500px;
+        padding: .5rem 1rem .5rem 1rem !important;
+        margin: .5rem;
+        color: #ffb300;
+        text-decoration: none;
+
+}
+
+.credit:hover{
+        color: #ff00b3;
+        border: #ff00b3 solid 1px;
+}
+
+.button:hover{
+        color: #ff00b3;
+        border: #ff00b3 solid 1px;
+}
+
+.button{
+        background-color: black;
+        border: #ffb300 solid 1px;
+        color: #ffb300;
+        margin: 2rem;
+        padding: 1rem;
+        text-decoration: none;
+}
 
 @font-face {
         font-family: frames;
