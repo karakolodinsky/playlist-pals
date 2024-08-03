@@ -39,8 +39,8 @@ const Select = () => {
         return (
                 <div>  
                 <section className="playlist">
-                    <img id="playlistImage" width="200" src="#" />
-                    <h2> <span id="playlistName" className="versionavec">Name: </span></h2>
+                    <img id="playlistImage"  src="#" />
+                    <h2> <span id="playlistName" className="versionavec"> </span></h2>
                   </section>
 
 

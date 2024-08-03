@@ -162,7 +162,13 @@ a{
 }
 
 
-#playlist{
+.playlist{
+        background-color: black;
+        border: #ff00b3 solid 1px;
+        color: #ff00b3;
+        width: 7em;
+
+
 
 }
 @font-face {
