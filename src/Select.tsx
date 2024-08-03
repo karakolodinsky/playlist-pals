@@ -17,8 +17,8 @@ const Select = () => {
                     } else {
                         try {
                             const accessToken = await getAccessToken(clientId, code);
-                            const profileData = await fetchProfile(accessToken);
-                            populateUI(profileData);
+                            const playlistData = await fetchProfile(accessToken);
+                            populateUI(playlistData);
                         } catch (error) {
                             console.error("Error fetching profile:", error);
                         }
@@ -28,34 +28,26 @@ const Select = () => {
                 fetchProfileData();
             }, []);
         
-            async function fetchProfile(accessToken: String) {
-                const result = await fetch("https://api.spotify.com/v1/me", {
+            async function fetchProfile(accessToken: String) : Promise<PagedPlaylists>{
+                const result = await fetch("https://api.spotify.com/v1/me/playlists", {
                     method: "GET",
                     headers: { Authorization: `Bearer ${accessToken}` }
                 });
-        
                 return await result.json();
             }
         
         return (
                 <div>  
-                <section id="profile">
-                    <h2>Logged in as <span id="displayName"></span></h2>
-                    <img id="avatar" width="200" src="#" />
-                    <ul>
-                      <li>User ID: <span id="id"></span></li>
-                      <li>Email: <span id="email"></span></li>
-                      <li>Spotify URI: <a id="uri" href="#"></a></li>
-                      <li>Link: <a id="url" href="#"></a></li>
-                      <li>Profile Image: <span id="imgUrl"></span></li>
-                    </ul>
+                <section className="playlist">
+                    <img id="playlistImage" width="200" src="#" />
+                    <h2> <span id="playlistName" className="versionavec">Name: </span></h2>
                   </section>
 
 
                   <div className='flex-row'>
                         <div className='credit frames'>
-                                <NavLink to="/credits"> 
-                                <a className='styling'>c </a> 
+                                <NavLink to="/credits" className='styling'> 
+                                c 
                                 </NavLink>
                         </div>
 
@@ -74,18 +66,15 @@ const Select = () => {
                 </div>
         )
 
-        function populateUI(profile: UserProfile) {
-                document.getElementById("displayName")!.innerText = profile.display_name;
-                document.getElementById("avatar")!.setAttribute("src", profile.images[0].url)
-                document.getElementById("id")!.innerText = profile.id;
-                document.getElementById("email")!.innerText = profile.email;
-                document.getElementById("uri")!.innerText = profile.uri;
-                document.getElementById("uri")!.setAttribute("href", profile.external_urls.spotify);
-                document.getElementById("url")!.innerText = profile.href;
-                document.getElementById("url")!.setAttribute("href", profile.href);
-                document.getElementById("imgUrl")!.innerText = profile.images[0].url;
+        function populateUI(playlists: PagedPlaylists) {
+                const playlist = playlists.items[0]
+                console.log(playlist)
+                document.getElementById("playlistImage")!.setAttribute("src", playlist.images[0].url)
+                document.getElementById("playlistName")!.innerText = playlist.name;
             }
+
 }
+
 
 export default Select;
 

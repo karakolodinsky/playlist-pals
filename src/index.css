@@ -84,9 +84,29 @@ a{
         .introdiv{
                 width:20em;
         }
-        .flex-row{
-                right: initial !important;
+        .space{
+                height: 18.5rem; 
+        
         }
+}
+
+@media (min-width : 768px ){ 
+        .flex-row{
+                align-self: flex-end;
+        }
+
+        .space{
+                height: 14rem; 
+        
+        }
+}
+
+.cred{
+        color: #ff00b3 !important;
+}
+
+.cred:hover{
+        color: #ffb300 !important;
 }
 
 .text span {
@@ -112,15 +132,13 @@ a{
 .flex-row{
         
         display: flex;
-        align-items: right;
-        justify-content: right;
         flex-direction: row;
-        bottom:0;
+        margin-top: 1rem;
         margin-bottom: .75rem;
-        right:0;
-        position: fixed;
         color: #ff00b3 !important;
 }
+
+
 
 .credit{
         margin: .5rem;
@@ -143,6 +161,10 @@ a{
         text-decoration: none;
 }
 
+
+#playlist{
+
+}
 @font-face {
         font-family: frames;
         src: url(assets/FramesPartOne-Medium.otf);

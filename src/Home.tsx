@@ -15,11 +15,12 @@ const Home = () => {
                         </div>
                   <p className="button frames" onClick={handleAuth}>Connect to Spotify</p>
                   
+                  <div className='space'></div>
 
                   <div className='flex-row'>
                         <div className='credit frames'>
-                                <NavLink to="/credits"> 
-                                <a className='styling'>c </a> 
+                                <NavLink to="/credits" className='styling'> 
+                                 c
                                 </NavLink>
                         </div>
 
