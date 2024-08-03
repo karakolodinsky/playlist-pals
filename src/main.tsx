@@ -11,7 +11,7 @@ import Home from './Home.tsx'
 import Credits from './Credits.tsx'
 import Select from './Select.tsx'
 import Pal from './Pal.tsx'
-import Bottombar from './Bottombar.tsx'
+
 
 const router = createBrowserRouter([
         {
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
                 element: <Credits></Credits>
         },
         {
-                path: "/select",
+                path: "/callback",
                 element: <Select></Select>
                 //authguard
         },

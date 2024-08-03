@@ -1,20 +1,25 @@
 import { NavLink } from 'react-router-dom';
 import './index.css'
-
+import { redirectToAuthCodeFlow } from './authCodeWithPkce';
 const Home = () => {
+        const clientId = "fe405747701f42ba9c275ddd6f37ffb7";
+        const handleAuth = async () => {
+                redirectToAuthCodeFlow(clientId);
+                // The user will be redirected to Spotify for authentication, and then back to your app with a code
+            };
+        
 
         return (
                 <div className='flex'>
-                        <div className='introdiv versionavec text'>
-                                <p> Intro text here. Make a text scrolling css animation?</p>
+                        <div className='introdiv versionavec text' id='text'>
                         </div>
-                  <NavLink to="/select" style={{textDecoration: 'none'}}><p className="button frames">Connect to Spotify</p></NavLink>
+                  <p className="button frames" onClick={handleAuth}>Connect to Spotify</p>
                   
 
                   <div className='flex-row'>
                         <div className='credit frames'>
                                 <NavLink to="/credits"> 
-                                <p className='styling'>c </p> 
+                                <a className='styling'>c </a> 
                                 </NavLink>
                         </div>
 

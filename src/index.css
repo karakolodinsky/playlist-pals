@@ -36,7 +36,7 @@ html, body {
 
 a{
         text-decoration: none !important;
-        color: #ffb300 !important;
+        /* color: #ffb300 !important; */
 
 }
 .versionavec {
@@ -46,13 +46,17 @@ a{
 
 .styling{
         padding: .25rem .25rem .25rem .25rem !important;
-        margin: auto;
+        color: #ffb300;
+        border: #ffb300 1px solid;
+        border-radius: 500px;
+        padding: .75rem 1rem .75rem 1rem !important;
+        
 }
 
-a:hover{
+.styling:hover{
         color: #ff00b3 !important;
+        border: #ff00b3 solid 1px;
 }
-
 .version{
         font-family: "version";
         font-weight: bolder;
@@ -67,11 +71,22 @@ a:hover{
         align-items: center;
         justify-content: center;
         text-align: center;
-        margin-top: 1rem;
+        margin-bottom: 2rem;
+        margin-top:1rem;
         padding: 1rem;
+        
         font-weight: bolder;
         font-size: larger;
 
+}
+
+@media (max-width : 768px ){ 
+        .introdiv{
+                width:20em;
+        }
+        .flex-row{
+                right: initial !important;
+        }
 }
 
 .text span {
@@ -88,12 +103,10 @@ a:hover{
 }
 
 .flex{
-        
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        
 }
 
 .flex-row{
@@ -102,37 +115,30 @@ a:hover{
         align-items: right;
         justify-content: right;
         flex-direction: row;
-        position:absolute;
         bottom:0;
+        margin-bottom: .75rem;
         right:0;
-        
+        position: fixed;
+        color: #ff00b3 !important;
 }
 
 .credit{
-        border: #ffb300 solid 1px;
-        border-radius: 500px;
-        padding: .5rem 1rem .5rem 1rem !important;
         margin: .5rem;
-        color: #ffb300;
         text-decoration: none;
 
-}
-
-.credit:hover{
-        color: #ff00b3;
-        border: #ff00b3 solid 1px;
 }
 
 .button:hover{
         color: #ff00b3;
         border: #ff00b3 solid 1px;
+        
 }
 
 .button{
         background-color: black;
         border: #ffb300 solid 1px;
         color: #ffb300;
-        margin: 2rem;
+        margin: 0;
         padding: 1rem;
         text-decoration: none;
 }
