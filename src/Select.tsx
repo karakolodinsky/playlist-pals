@@ -38,16 +38,17 @@ const Select = () => {
         
         return (
                 <div>  
-                <section className="playlist">
+                <div className="playlist introdiv">
                     <img id="playlistImage"  src="#" />
                     <h2> <span id="playlistName" className="versionavec"> </span></h2>
-                  </section>
+                  </div>
+
 
 
                   <div className='flex-row'>
                         <div className='credit frames'>
                                 <NavLink to="/credits" className='styling'> 
-                                c 
+                                 c
                                 </NavLink>
                         </div>
 

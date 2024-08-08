@@ -84,21 +84,15 @@ a{
         .introdiv{
                 width:20em;
         }
-        .space{
-                height: 18.5rem; 
-        
+        .flex-row{
+                right: 21% !important;
         }
+       
 }
 
 @media (min-width : 768px ){ 
-        .flex-row{
-                align-self: flex-end;
-        }
-
-        .space{
-                height: 14rem; 
         
-        }
+
 }
 
 .cred{
@@ -136,6 +130,9 @@ a{
         margin-top: 1rem;
         margin-bottom: .75rem;
         color: #ff00b3 !important;
+        position: fixed;
+        bottom: 0;
+        right: 0;
 }
 
 
@@ -163,10 +160,7 @@ a{
 
 
 .playlist{
-        background-color: black;
-        border: #ff00b3 solid 1px;
-        color: #ff00b3;
-        width: 7em;
+        width: 14em;
 
 
 
